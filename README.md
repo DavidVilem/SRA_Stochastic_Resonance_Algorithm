@@ -114,11 +114,11 @@ shape_param = 1.8 + 0.4 * (num_cities / 10000)
 
 Se observa en los experimentos una curva plana de energía (distancia) óptima desde las primeras iteraciones, mientras que la frecuencia del sistema y la amplitud del ruido fluyen de forma dinámica. Esto indica que el sistema no genera mejoras adicionales una vez ha alcanzado un mínimo profundo, y que el mecanismo de resonancia mantiene su funcionamiento adaptativo.
 
-![Curva de convergencia](c05c5250-e9e0-4054-a1a6-5f4f47a40f4d.png)
+![Convergencia](image/Convergencia.png)
 
 Además, la forma espacial de la ruta obtenida muestra que la optimización logra evitar rutas erráticas o zigzags excesivos, manteniendo una suavidad general notable:
 
-![Visualización del tour](8a20819f-9a88-4472-8413-3e5f9ff490f6.png)
+![TSP](image/Grafico_TSP.png)
 
 Esta imagen representa una solución generada con 10 000 ciudades distribuidas aleatoriamente. La distribución del camino sigue un patrón suave y compacto, resultado de la combinación del gradiente local, acoplamiento y resonancia estocástica.
 
@@ -136,6 +136,11 @@ Para evaluar objetivamente el rendimiento del algoritmo, se realizaron pruebas s
 Se ejecutaron **50 corridas por instancia**, midiendo distancia final, tiempo y mejora relativa respecto al óptimo conocido. Aunque el algoritmo no supera a LKH, muestra consistencia en todos los tamaños y revela su potencial como herramienta de exploración y ajuste dinámico de ruido.
 
 Los resultados detallados por instancia incluyen estadísticas agregadas (media, desviación, mínimo, máximo) y confirman que el modelo responde a escalas grandes sin necesidad de rediseño manual.
+
+![boxplot](image/boxplot_vs_optimo_1.png)
+![boxplot](image/boxplot_vs_optimo_2.png)
+![boxplot](image/boxplot_vs_optimo_3.png)
+![boxplot](image/boxplot_vs_optimo_4.png)
 
 ---
 
